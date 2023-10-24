@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap');
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5.75rem;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.navbar {
+  position: relative;
+  height: 100%;
+  max-width: 100vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.navbar-list {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list li {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #155588;
+  padding: 0.9rem;
+  cursor: pointer;
+}
+
+.navbar-list a {
+  text-transform: uppercase;
+  padding: 0.5rem 0.95rem;
+  border-radius: 2rem;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #155588;
+}
+
+.navbar-list a:hover {
+  color: #ffffff;
+  background-color: #155588;
+}
+
+.active-navbar-a {
+  color: #ffffff;
+  background-color: #155588;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 0.25rem;
+}
+
+.logo img {
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
+.logoBorder {
+  width: 5px;
+  height: 50%;
+  border: 2px ridge #4d4d4d;
+  background-color: #4d4d4d;
+}
+
+.name1,
+.name2 {
+  font-size: 1.75rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+}
+
+.name1 {
+  color: #5a9dee;
+}
+
+.name2 {
+  color: #ffa317;
+}
+
+.nav-icon {
+  display: none;
+}
+
+.menuIcon {
+  font-size: 2.25rem;
+  display: none;
+  border: none;
+}
+
+.menu {
+  display: flex;
+}
+
+.menuBtn {
+  display: flex;
+  gap: 2rem;
+}
+
+/* For Small Device */
+@media screen and (max-width: 1024px) {
+  .name1,
+  .name2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    position: fixed;
+    bottom: 0;
+    overflow-y: hidden;
+    top: inherit;
+    box-shadow: var(--dark-shadow);
+  }
+
+  .navbar {
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .navbar-list {
+    position: fixed;
+    bottom: 5rem;
+    left: 0;
+    width: 100%;
+    height: 87%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--clr-background);
+    visibility: hidden;
+    padding: 1rem;
+  }
+
+  .active-navbar-list {
+    visibility: visible;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+
+  .nav-icon {
+    margin: 0.75rem;
+    display: block;
+  }
+
+  .navbar-list li {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .navbar-list li::before {
+    height: 0.4rem;
+    width: 0.4rem;
+    border-radius: 50%;
+    transform: translateX(50%);
+    bottom: 0;
+    left: 47.5%;
+    margin-top: 3px;
+  }
+  .name1,
+  .name2 {
+    font-size: 1.5rem;
+  }
+  .logo img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .name1,
+  .name2 {
+    font-size: 1.2rem;
+    letter-spacing: normal;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .name1 {
+    font-size: 1rem;
+    letter-spacing: 3px;
+  }
+  .name2 {
+    display: none;
+  }
+}
